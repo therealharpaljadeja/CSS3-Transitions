@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Buttons</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+            background-color: coral;
+        }
+        .button-container{
+            margin:40px;
+        }
+        button{
+            border:none;
+            background: transparent;
+            font-size:18px;
+            margin: 10px;
+        }
+        #one{
+            border:3px solid transparent;
+            padding: 10px;
+            background-color: white;
+            color: coral;
+            transition: background-color 0.3s,color 0.3s, border 0.3s;
+        }
+        #one:hover{
+            color: white;
+            background-color: transparent;
+            border: 3px solid white;
+        }
+        #two{
+            color: white;
+            position: relative;
+            padding: 10px;
+           
+        }
+        #two:before{
+            content: '';
+            width: 0%;
+            height:2px;
+            background-color: white;
+            position: absolute;
+            bottom: 0%;
+            right: 0%;
+            transition: width 0.3s;
+        }
+        #two:hover:before{
+            width:100%;
+        }
+        #two:after{
+            content:'';
+            width:2px;
+            height: 0%;
+            position: absolute;
+            bottom: 0%;
+            right: 0%;
+            background-color: white;
+            transition: height 0.3s;
+        }
+        #two:hover:after{
+            height: 100%;
+        }
+         #three{
+            color: white;
+            position: relative;
+            padding: 10px;
+           
+        }
+        #three:before{
+            content: '';
+            width: 0%;
+            height:2px;
+            background-color: white;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            transition: width 0.3s;
+        }
+        #three:hover:before{
+            width:100%;
+        }
+        #three:after{
+            content:'';
+            width:2px;
+            height: 0%;
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            background-color: white;
+            transition: height 0.3s;
+        }
+        #three:hover:after{
+            height: 100%;
+        }
+        #four{
+            color: white;
+            position: relative;
+            padding: 10px;
+           transition: letter-spacing 0.3s;
+        }
+        #four:before{
+            content: '';
+            width: 0%;
+            height:2px;
+            background-color: white;
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            transition: width 0.3s;
+        }
+        #four:hover:before{
+            width:100%;
+        }
+        #four:after{
+            content:'';
+            width:0%;
+            height: 2px;
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            background-color: white;
+            transition: width 0.3s;
+        }
+        #four:hover:after{
+            width:100%;
+        }
+        #four:hover{
+            letter-spacing: 2px;
+        }
+          #four:before{
+            content: '';
+            width: 0%;
+            height:2px;
+            background-color: white;
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            transition: width 0.3s;
+        }
+        #four:hover:before{
+            width:100%;
+        }
+        #four:after{
+            content:'';
+            width:0%;
+            height: 2px;
+            position: absolute;
+            bottom: 0%;
+            left: 0%;
+            background-color: white;
+            transition: width 0.3s;
+        }
+        #four:hover:after{
+            width:100%;
+        }
+        #four:hover{
+            letter-spacing: 2px;
+        }
+        #five{
+            color:white;
+            position: relative;
+            padding: 10px;
+        }
+        #five:before{
+            content: '';
+            width:7px;
+            height:7px;
+            border-bottom:2px solid transparent;
+            border-style: solid;
+            border-width: 2px;
+            border-color: white white transparent transparent;
+            position: absolute;
+            top: 0%;
+            right: 0%; 
+             transition:width 0.3s,height 0.3s;
+        }
+          #five:after{
+            content: '';
+            width:7px;
+            height:7px;
+            border-bottom:2px solid transparent;
+            border-style: solid;
+            border-width: 2px;
+            border-color: transparent transparent white white;
+            position: absolute;
+            bottom: 0%;
+            left: 0%; 
+              transition:width 0.3s,height 0.3s;
+        }
+        #five:hover:before,#five:hover:after{
+            width:105%;
+            height: 105%;
+        }
+        #six{
+        padding:10px;
+        color: white;
+          box-shadow: inset 0px 0px 0px white;
+            transition:box-shadow 0.3s;
+        }
+        #six:hover{
+              box-shadow: inset 0px 0px 15px white;
+        }
+      
+        #seven{
+            border:2px solid white;
+            padding: 10px;
+            background-color:transparent;
+            color: white;  
+            position: relative;
+            transition: color 0.3s;
+
+        }
+        #seven:before{
+            content: '';
+            position: absolute;
+            width:0%;
+            height:100%;
+            background-color: white;
+            top:0%;
+            left:0%;
+            transition: width 0.3s cubic-bezier(.77,-0.14,1,.59);
+            z-index: -1;
+        }
+        #seven:hover:before{
+            width:100%;
+        }
+        #seven:hover{
+            color:coral;
+        }
+          #eight{
+            border:2px solid white;
+            padding: 10px;
+            background-color:transparent;
+            color: white;  
+            position: relative;
+            transition: color 0.3s;
+
+        }
+        #eight:before{
+            content: '';
+            position: absolute;
+            width:100%;
+            height:0%;
+            background-color: white;
+            top:0%;
+            left:0%;
+            transition: height 0.3s cubic-bezier(.77,-0.14,1,.59);
+            z-index: -1;
+        }
+        #eight:hover:before{
+            height:50%;
+        }
+         #eight:after{
+            content: '';
+            position: absolute;
+            width:100%;
+            height:0%;
+            background-color: white;
+            bottom:0%;
+            left:0%;
+            transition: height 0.3s cubic-bezier(.77,-0.14,1,.59);
+            z-index: -1;
+        }
+        #eight:hover:after{
+            height:50%;
+        }
+        #eight:hover{
+            color:coral;
+        }
+         #nine{
+            border:2px solid white;
+            padding: 10px;
+            background-color:transparent;
+            color: white;  
+            position: relative;
+            transition: border-radius 0.3s;
+        }
+        #nine:hover{
+            border-radius:50px;
+        }
+         #ten{
+            border:2px solid white;
+            padding: 10px;
+            background-color:transparent;
+            color: white;  
+            position: relative;
+             overflow: hidden;
+             transition: color 0.6s;
+        }
+        #ten:before{
+            content:'';
+            width:10%;
+            height:130%;
+            background-color:white;
+            position: absolute;
+            top:-50%;
+            left:-60%;
+            border-radius: 80%;
+            transform: rotate(30deg);
+            transition-property: width, height, border-radius;
+            transition-duration: 0.6s;
+            z-index: -1;
+        }
+        #ten:hover:before{
+           width:300%;
+            height:300%;
+            border-radius:0%;
+        }
+        #ten:hover{
+            color:coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="button-container">
+        <button id="one">Hover Me</button>
+        <button id="two">Hover Me</button>
+        <button id="three">Hover Me</button>
+        <button id="four">Hover Me</button>
+        <button id="five">Hover Me</button>
+        <button id="six">Hover Me</button>
+        <button id="seven">Hover Me</button>
+        <button id="eight">Hover Me</button>
+        <button id="nine">Hover Me</button>
+        <button id="ten">Hover Me</button>
+    </div>
+</body>
+</html>

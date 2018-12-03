@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transition 2</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+        }
+        .container{
+            width:100%;
+            height: 500px;
+            background-image: url(pexels-photo-912587.jpeg);
+            background-size: cover;
+            background-position: 0% 10%;
+            transition: background-position 0.3s;
+        }
+        .container:hover .text{
+            opacity: 1;
+        }
+        .container:hover{
+            background-position: 0% 40%;
+        }
+        .text{
+            opacity: 0;
+            text-align: center;
+            color: white;
+            background-color: rgba(0,0,0,0.6);
+            height: 100%;
+            transition: opacity 0.3s;
+        }
+        h1{
+            font-size: 50px;
+            padding: 20px;
+        }
+        p{
+            font-size: 20px;
+           padding:20px;
+        }
+        .card-container{
+            text-align: center;
+            display: block;
+        }
+        .card-container h2{
+            margin: 20px;
+        }
+        .card-container button{
+            margin: 20px;
+            padding: 20px;
+            border:none;
+            font-size: 19px;
+            display: block;
+            margin: 10px auto;
+        }
+        .cards .card-img img{ 
+            height: 200px;
+            width: 100%;
+        }
+        .cards{
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.4);   
+        width: 40%;
+        text-align: center;
+        margin:10px;
+        display: inline-block;
+        opacity: 0;
+        }
+        button:hover .cards{
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <h1>Visit Space</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A laboriosam iste tempore amet aliquam, maiores, veritatis aperiam temporibus repellat qui laudantium impedit optio quisquam sapiente nihil modi dolorum. Rerum, nemo.</p>
+        </div>
+    </div>
+    <div class="card-container">
+        <h2>Cards</h2>
+        <button>Hover Me</button>
+        <div class="cards">
+            <div class="card-img">
+                <img src="pexels-photo-912587.jpeg" alt="">
+            </div>
+            <div class="card-des">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore nobis saepe nulla perferendis, iste natus numquam quo consequatur illum assumenda voluptatum sunt, hic quia eligendi tempore ab architecto aliquam officiis.</p>
+            </div>
+        </div>
+         <div class="cards">
+            <div class="card-img">
+                <img src="pexels-photo-912587.jpeg" alt="">
+            </div>
+            <div class="card-des">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore nobis saepe nulla perferendis, iste natus numquam quo consequatur illum assumenda voluptatum sunt, hic quia eligendi tempore ab architecto aliquam officiis.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

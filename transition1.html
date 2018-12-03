@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <title>Transition Challenge 1</title>
+    <style>
+        html,body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .background{
+            height: 400px;
+            background: #009FFF;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(left, #ec2F4B, #009FFF);
+        background: -o-linear-gradient(left, #ec2F4B, #009FFF);
+        background: linear-gradient(to right, #ec2F4B, #009FFF);  
+        background-size: 200%;
+        background-position: right;
+        text-align: center;
+        color: #ec2F4B;
+        transition: background-position 2s,color 2s;
+        }
+        h2{
+            position: relative;
+            font-family: 'Source Sans Pro', sans-serif;
+            top: 45%;
+            font-size: 50px;
+        }
+        .background:hover{
+            background-position: left;
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <h2>My Beautiful Website</h2>
+    </div>
+</body>
+</html>
